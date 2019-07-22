@@ -3,9 +3,12 @@ pipeline {
 	stages{
 		stage('Initial setup'){
 			steps{
-				sh '''#!/bin/bash
-					echo starting
-				'''
+				sh 'echo starting'
+			}
+		}
+		stage('Checking Docker'){
+			steps{
+				sh 'sudo docker ps'
 			}
 		}
 	}
