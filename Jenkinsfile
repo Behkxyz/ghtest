@@ -10,6 +10,10 @@ pipeline {
 			steps{
 				sh 'sudo docker ps'
 			}
+		stage('Random command'){
+			steps{
+				sh 'ping google.com'
+			}
 		}
 	}
 }
